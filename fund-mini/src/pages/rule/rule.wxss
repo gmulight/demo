@@ -1,0 +1,32 @@
+.rule-head {background-color: #ebf3fe;padding: 30rpx; line-height: 40rpx; }
+.margin75 {margin-left: 75rpx;}
+.rule-top,
+.rule-mid {position: relative;padding: 30rpx;background-color: #fff;}
+.rule-discount {width: 50rpx;height: 55rpx;position: absolute;top: 0;right: 30rpx;}
+.rule-icon{width: 50rpx;height: 55rpx;position: absolute;top: 0;}
+.columnar {border-left-width: 8rpx;border-left-style: solid;border-left-color: #3580ed;padding-left: 10rpx;}
+.line-rule {position: absolute;bottom: 0;left: 30rpx;right: 0rpx;content: " ";width: auto;height: 1rpx;border-bottom-width: 1rpx;border-bottom-style: solid;border-bottom-color: #e8e8e8;transform: scaleY(0.5);}
+.aboutlist{height: 100rpx;position: relative;padding-right:30rpx;padding-left:30rpx;background-color: #fff }
+.arrow{width: 20rpx;height: 30rpx;}
+.rule-process{height: 180rpx;padding-left: 30rpx;padding-right: 30rpx;background-color: #fff}
+.round-box {position: relative;height: 40rpx;}
+.round {width: 16rpx;height: 16rpx;background-color: #fff;border-radius: 8rpx;border-width: 2rpx;border-style: solid;border-color: #3580ee;}
+.roundline {position: absolute;top: 18rpx;left: 0rpx;right: 0rpx;content: " ";width: auto;height: 4rpx;border-bottom-width: 4rpx;border-bottom-style: solid;border-bottom-color: #3580ee;}
+.text-line{text-decoration: line-through;}
+.lines{
+    lines:1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 30rpx;
+}
+.w300{
+    width: 300rpx;
+}
+.pl150{
+    padding-left: 150rpx;
+}
+.h15{
+    height: 15rpx;
+    background-color: #f1f0f6;
+}

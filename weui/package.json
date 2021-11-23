@@ -1,0 +1,12 @@
+{
+    "name": "@lighting/miniapp-cli",
+    "version": "1.0.0",
+    "scripts": {
+        "build:light": "miniapp light",
+        "build:wx": "miniapp wx",
+        "build:web": "miniapp web"
+    },
+    "devDependencies": {
+        "@lighting/miniapp-cli": "*"
+    }
+}

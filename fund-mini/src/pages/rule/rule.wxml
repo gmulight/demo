@@ -1,0 +1,62 @@
+<view style="background-color:#eee;">
+  <view class="h15"></view>
+  <view>
+      <!-- 申购费率 -->
+      <view>
+        <view class="flex rule-head justify-between align-center flex-row">
+          <view class="flex flex-1">
+            <view class="columnar">
+              <text class="font-14 m-color-1 font-bold">购买费率</text>
+            </view>
+          </view>
+          <view class="flex w300 justify-end">
+            <text class="font-14 m-color-3">支持银行及费率折扣</text>
+          </view>
+        </view>
+        <view class="flex align-center rule-top flex-row">
+          <view class="flex flex-1">
+            <text class="font-14 m-color-1">买入金额</text>
+          </view>
+          <view class="flex align-center w300 pl60">
+            <text class="font-14 m-color-1 ml70">费率</text>
+          </view>
+          <view class="line-rule" style="left:0px"></view>
+        </view>
+        <view class="flex align-center rule-mid flex-row" wx:for="{{declare}}" wx:for-index="index2" wx:for-item="item">
+          <view class="flex flex-1">
+            <text class="font-14 m-color-1">{{item.money}}</text>
+          </view>
+          <view class="flex align-center w300 pl60">
+            <text class="font-14 m-color-1 ml70">{{item.rate}}</text>
+          </view>
+          <view class="line-rule"></view>
+        </view>
+      </view>
+
+      <view class="mt15">
+        <view class="flex rule-head  justify-between">
+          <view class="columnar">
+            <text class="font-14 m-color-1 font-bold">赎回费率</text>
+          </view>
+        </view>
+        <view class="flex align-center rule-top flex-row">
+          <view class="flex flex-1">
+            <text class="font-14 m-color-1">持有期限</text>
+          </view>
+          <view class="flex align-center w300 pl60 ">
+            <text class="font-14 m-color-1 ml70">费率</text>
+          </view>
+          <view class="line-rule" style="left:0px"></view>
+        </view>
+        <view class="flex align-center rule-top flex-row" wx:for="{{redeem}}" wx:for-index="index" wx:for-item="item">
+          <view class="flex flex-1">
+            <text class="font-14 m-color-1">{{item.day}}</text>
+          </view>
+          <view class="flex align-center w300 pl60 ">
+            <text class="font-14 m-color-1 ml70">{{item.rate}}</text>
+          </view>
+          <view class="line-rule"></view>
+        </view>
+      </view>
+  </view>
+</view>
