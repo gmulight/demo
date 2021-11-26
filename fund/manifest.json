@@ -1,0 +1,71 @@
+{
+    "pages": {
+        "/index/home": {
+            "navBar": {
+                "title": "首页",
+                "backgroundColor": "#fefefe",
+                "color": "#000000"
+            }
+        },
+        "/index/discover": {
+            "navBar": {
+                "title": "精选",
+                "backgroundColor": "#000000",
+                "color": "#ffffff"
+            }
+        },
+        "/index/fund-list": {
+            "navBar": {
+                "title": "基金",
+                "backgroundColor": "#fefefe",
+                "color": "#000000"
+            }
+        },
+        "/index/setting": {
+            "navBar": {
+                "title": "我的",
+                "backgroundColor": "#000000",
+                "color": "#ffffff"
+            }
+        }
+    },
+    "navBar": {
+        "title": "浦银基金",
+        "backgroundColor": "#dddddd"
+    },
+    "window": {
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": "30",
+        "pageOrientation": true,
+        "backgroundColor": "#cccccc"
+    },
+    "tabBar": {
+        "color": "#978c8c",
+        "selectedColor": "#3c94fe",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "page": "/index/home",
+                "iconSelected": "images/bottom-i1-1.png",
+                "icon": "images/bottom-i1.png",
+                "text": "首页"
+            }, {
+                "page": "/index/discover",
+                "iconSelected": "images/bottom-i2-1.png",
+                "icon": "images/bottom-i2.png",
+                "text": "精选"
+            }, 
+            {
+                "page": "/index/setting",
+                "iconSelected": "images/bottom-i4-1.png",
+                "icon": "images/bottom-i4.png",
+                "text": "我的"
+            },{
+                "page": "/index/fund-list",
+                "iconSelected": "images/bottom-i3-1.png",
+                "icon": "images/bottom-i3.png",
+                "text": "基金"
+            }
+        ]
+    }
+}

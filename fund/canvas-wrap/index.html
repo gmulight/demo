@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        html,body,.chart-wrapper,canvas{
+            width: 100%;height: 100%;
+            overflow: hidden;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<script src="f2.js"></script>
+
+<div class="chart-wrapper">
+    <canvas id="mountNode"></canvas>
+</div>
+<script>
+    var chart = new F2.Chart({
+        id: 'mountNode',
+        pixelRatio: window.devicePixelRatio
+    });
+
+    window.addEventListener("message",function (ev) {
+        eval(ev.data)
+    })
+</script>
+</body>
+</html>

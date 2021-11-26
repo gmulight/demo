@@ -1,0 +1,512 @@
+/* basic */
+a {
+  text-decoration: none;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.row-item {
+  flex: 1;
+  display: inline-flex;
+}
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-baseline {
+  align-items: baseline;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.t-center {
+  text-align: center;
+}
+.t-left {
+  text-align: left;
+}
+.t-right {
+  text-align: right;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-9 {
+  flex: 9;
+}
+
+
+/* color */
+.bgc-white {
+  background-color: #fff;
+}
+.c-white {
+  color: #ffffff;
+}
+
+.m-color-1 {
+  color: #333;
+}
+
+.m-color-2 {
+  color: #978c8c;
+}
+
+.m-color-3 {
+  color: #3c94fe;
+}
+
+.m-color-4 {
+  color: #2e3192;
+}
+
+.m-color-5 {
+  color: #fff;
+}
+
+.m-color-6 {
+  color: #5e5e5e;
+}
+
+.m-color-7 {
+  color: #666;
+}
+
+.m-color-8 {
+  color: #ee5a24;
+}
+
+.m-color-9 {
+  color: #808080;
+}
+
+.m-color-10 {
+  color: #157fd0;
+}
+
+.m-color-red {
+  color: #f0384f;
+}
+
+.m-color-green {
+  color: #37c848;
+}
+
+
+/* margin */
+
+.mt10 {
+  margin-top: 10px;
+}
+.mt15 {
+  margin-top: 15px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt25 {
+  margin-top: 25px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.mt60 {
+  margin-top: 60px;
+}
+.mt80 {
+  margin-top: 80px;
+}
+.mt100 {
+  margin-top: 100px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+.ml15{
+  margin-left: 15px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.ml25 {
+  margin-left: 25px;
+}
+.ml30 {
+  margin-left: 30px;
+}
+.ml40 {
+  margin-left: 40px;
+}
+.ml60 {
+  margin-left: 60px;
+}
+.ml70{
+  margin-left:70px;
+}
+.ml100{
+  margin-left:100px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+.mr40 {
+  margin-right: 40px;
+}
+.mr60 {
+  margin-right: 60px;
+}
+.mr80 {
+  margin-right: 80px;
+}
+.mr130 {
+  margin-right: 130px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+.mb80 {
+  margin-bottom: 80px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+.pt20 {
+  padding-top: 20px;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.pt40 {
+  padding-top: 40px;
+}
+.pt60 {
+  padding-top: 60px;
+}
+/* iPhone X状态栏高度 */
+.pt88 {
+  padding-top: 88px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.pb30 {
+  padding-bottom: 30px;
+}
+.pb40 {
+  padding-bottom: 40px;
+}
+.pb60 {
+  padding-bottom: 60px;
+}
+.pb80 {
+  padding-bottom: 80px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+.pl20 {
+  padding-left: 20px;
+}
+.pl30 {
+  padding-left: 30px;
+}
+.pl40 {
+  padding-left: 40px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+.pr20 {
+  padding-right: 20px;
+}
+.pr30 {
+  padding-right: 30px;
+}
+.pr40 {
+  padding-right: 40px;
+}
+
+.pd10 {
+  padding: 10px;
+}
+.pd20 {
+  padding: 20px;
+}
+.pd30 {
+  padding: 30px;
+}
+.pd40 {
+  padding: 40px;
+}
+
+.pos-r {
+  position: relative;
+}
+.pos-a {
+  position: absolute;
+}
+.pos-f {
+  position: fixed;
+}
+
+.lines1 {
+  lines: 1;
+}
+
+.noborder {
+  border: none;
+}
+
+.opacity-8 {
+  opacity: 0.8;
+}
+.opacity-7 {
+  opacity: 0.7;
+}
+.opacity-5 {
+  opacity: 0.5;
+}
+
+
+/* 行高 */
+.split {
+  height: 15px;
+  overflow: hidden;
+}
+
+/*字体*/
+.font-10 {
+  font-size: 20px;
+}
+
+.font-11 {
+  font-size: 22px;
+}
+
+.font-12 {
+  font-size: 24px;
+}
+
+.font-13 {
+  font-size: 26px;
+}
+
+.font-14 {
+  font-size: 28px;
+}
+
+.font-15 {
+  font-size: 30px;
+}
+
+.font-16 {
+  font-size: 32px;
+}
+
+.font-18 {
+  font-size: 36px;
+}
+
+.font-19 {
+  font-size: 38px;
+}
+
+.font-20 {
+  font-size: 40px;
+}
+
+.font-21 {
+  font-size: 42px;
+}
+
+.font-22 {
+  font-size: 44px;
+}
+
+.font-23 {
+  font-size: 46px;
+}
+
+.font-24 {
+  font-size: 48px;
+}
+.font-30 {
+  font-size: 60px;
+}
+
+.font-33 {
+  font-size: 66px;
+}
+
+.font-34 {
+  font-size: 68px;
+}
+
+.font-38 {
+  font-size: 76px;
+}
+
+.font-40 {
+  font-size: 80px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.mb15{
+  margin-bottom: 15px;
+}
+.mt120{
+  margin-top: 120px;
+}
+.mt90{
+  margin-top:90px;
+}
+
+.pl60{
+  padding-left: 60px;
+}
+.ml50{
+  margin-left: 50px;
+}
+.mb120{
+  margin-bottom: 120px;
+}
+.mt45{
+  margin-top: 45px;
+}
+.mt70{
+  margin-top:70px;
+}
+.pl45{
+  padding-left: 45px;
+}
+.pr45{
+  padding-right: 45px;
+}
+.mt130{
+  margin-top:130px;
+}
+.mt260{
+  margin-top:260px;
+}
+.mt65{
+  margin-top:65px;
+}
+.font-45{
+  font-size: 90px;
+}
+.ml80{
+  margin-left:80px;
+}
+.font-25{
+  font-size:50px;
+}
+.mt5{
+  margin-top:5px;
+}
+.pl35{
+  padding-left:35px;
+}
+.mr15{
+  margin-right:15px;
+}
+/* 特殊处理 */
+.font-26{
+  font-size:32px;
+}
+.ml5{
+margin-left:5px;
+}
+.mr5{
+  margin-right:5px;
+} 
+.pl15 {
+  padding-left: 15px;
+}
+.pr15 {
+  padding-right: 15px;
+}
+.pb25{
+  padding-bottom: 25px;
+}
+.pt15 {
+  padding-top: 15px;
+}
+.pb15 {
+  padding-bottom: 15px;
+}

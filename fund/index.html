@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <title>恒生安盛</title>
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+        
+        *:not(input, textarea) {
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+    <script>
+        //APP:"795f48c7f37046fa868fb33527ab7c73"
+        //微信:"96834e3eec3448b68e6a3eafa048ea21"
+        // var Countly = Countly || {};//埋点
+        // Countly.q = Countly.q || [];
+        // (function() {
+        //     var cly = document.createElement('script');
+        //     cly.type = 'text/javascript';
+        //     cly.async = true;
+        //     cly.src = 'https://nc.hsstr.com/nc/countly.js?appkey=78e8d26b854342d5888c08a29424827f&debug=false&version=1.0.1';
+        //     var s = document.getElementsByTagName('script')[0];
+        //     s.parentNode.insertBefore(cly, s);
+        // })();
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <view id="index" />
+        <!-- 首页-->
+        <view id="index/home" home="true" parent="index" />
+        <!-- 精选 / 精选_定投计划 -->
+        <view id="index/discover" parent="index" />
+        <view id="index/discover/fixedplan" parent="index" />
+        <!-- 基金 -->
+        <view id="index/fund-list" parent="index" />
+        <view id="index/fund" parent="index" />
+        <view id="index/file" parent="index" />
+        <view id="index/managerchange" parent="index" />
+        <view id="index/rule" parent="index" />
+
+
+
+        <!-- 我的 -->
+        <view id="index/setting" parent="index" />
+
+    </div>
+    <script src="res/clipboard.min.js"></script>
+    <script src="app.js"></script>
+    <script src="res/data-picker-h5.js"></script>
+    <!-- <script src="res/canvas.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "appBaseUrl": "http://101.71.12.145:7705/appServer/",
+  "homeAndDiscoverUrl": "http://101.71.12.145:7705/upload/html5/pages/",
+  "feedbackImgUrl": "http://101.71.12.145:7705/upload/attachment/custFeedback/",
+  "wxAppid": "",
+  "internet": "",
+
+  "dsAgencyno": "225",
+  "weixin": "",
+  "xjb": {
+      "name": "恒生钱包",
+      "code": "225010",
+      "inputMin": 0.01
+  },
+  "isDollar": "false"
+  
+ 
+}

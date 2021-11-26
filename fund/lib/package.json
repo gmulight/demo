@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@antv/f2": "^3.3.3",
+    "fastclick": "^1.0.6",
+    "light-sdk": "*",
+    "lighting-ui": "*",
+    "validator": "^6.2.1",
+    "wolfy87-eventemitter": "^5.2.5",
+    "light-chart": "*"
+  }
+}

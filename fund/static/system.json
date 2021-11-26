@@ -1,0 +1,16 @@
+{
+  "message": "系统维护",
+  "content1":"对不起，系统正在维护中...",
+  "content2":"请您稍后访问哦~",
+  "content3":"我们的每一分努力，都为了给您带来十分的满意！",
+  "refreshTime": 1,
+  "openFund": true,
+  "successful": true,
+  "isContractCard": false,
+  "isActivity":"1",
+  "friendCallid":"gifttest",
+  "tenanGuideEnable": false,
+  "fundTypeStr2LimitIndexAveFix":["货币型","债券型","QDII"],
+  "fundTypeStr2LimitTargetProfitFix":["货币型","债券型"],
+  "limitBankChannels":["007M","012M","003M","014M","9033","0033","0143"]
+}
