@@ -1,0 +1,233 @@
+ .fund-head {
+   width: 750rpx;
+    height: 170rpx;
+    position: relative;
+    background-color: #fff;
+    }
+
+    .fund-mid {
+    height: 80rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    background-color: #fff;
+    }
+
+    .risk-icon {
+    width: 30rpx;
+    height: 30rpx;
+    }
+
+    .rule-box {
+    position: relative;
+    }
+    .line-view {
+    position: absolute;
+    bottom: 0;
+    left: 0rpx;
+    right: 0rpx;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+    }
+    .chart-head {
+    height: 80rpx;
+    background-color: #fff;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    position: relative;
+    }
+    .columnar {
+    border-left-color: #3580ed;
+    border-left-style: solid;
+    border-left-width: 8rpx;
+    padding-left: 10rpx;
+    }
+    .tabBar-wrap {
+    width: 690rpx;
+    height: 52rpx;
+    border-width: 2rpx;
+    border-color: #3580ee;
+    margin-left: 30rpx;
+    border-radius: 5rpx;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    }
+    .tabBar-text {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    }
+    .active {
+    background-color: #3580ee;
+    color: #fff;
+    }
+    .border-right {
+    border-right-width: 2rpx;
+    border-right-color: #3580ee;
+    }
+    .chart-img {
+    width: 750rpx;
+    height: 395rpx;
+    }
+    .aboutlist {
+    height: 90rpx;
+    position: relative;
+    padding-right: 30rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+    }
+    .arrow {
+    width: 20rpx;
+    height: 30rpx;
+    }
+    .rule-process{
+    height: 180rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    background-color: #fff
+    }
+    .round-box {
+    position: relative;
+    height: 40rpx;
+    }
+    .round {
+    width: 16rpx;
+    height: 16rpx;
+    background-color: #fff;
+    border-radius: 8rpx;
+    border-width: 2rpx;
+    border-style: solid;
+    border-color: #3580ee;
+    z-index: 9;
+    }
+    .roundline {
+    position: absolute;
+    top: 50%;
+    left: 0rpx;
+    right: 0rpx;
+    transform: translateY(-50%);
+    content: " ";
+    width: auto;
+    height: 4rpx;
+    border-bottom-width: 4rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #3580ee;
+    }
+    .bottomBtn {
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 750rpx;
+    z-index: 10;
+    }
+    .blue-bj {
+        width: 300rpx;
+        background-color: #3580ee;
+    }
+    .red-bj {
+        background-color: #f0384f;
+    }
+    .borderR {
+    border-right-width: 1rpx;
+    border-right-style: solid;
+    border-right-color: #e8e8e8;
+    }
+    .trend-status {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 16rpx;
+        padding-right: 28rpx;
+        padding-bottom: 16rpx;
+        padding-left: 28rpx;
+        margin-bottom: 40rpx;
+    }
+    .trend-status-one-line {
+        background-color: #ebf3fc;
+    }
+    .location_line {
+        width:1rpx;
+        height:250rpx;
+        background-color:#666;
+        position: absolute;
+        top: 10rpx;
+    }
+    .tab-line {
+        width:375rpx;
+        height:2rpx;
+        position:absolute;
+        bottom:0rpx;
+    }
+    .disabled{
+     width: 300rpx;
+      background-color: #808080;
+    }
+    .share{
+        width: 45rpx;
+        height: 40rpx;
+    }
+    .title-img {
+        width: 50rpx;
+        height: 50rpx;
+    }
+
+    .bottom-line{
+        border-bottom-width: 1rpx;
+        border-bottom-color: #e8e8e8;
+    }
+    .dialog-content{
+        height: 200rpx;
+        padding-top: 40rpx;
+        padding-left: 20rpx;
+        padding-right: 20rpx;
+    }
+    .dialog-btns{
+        height: 90rpx;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #chartline {
+        position: relative;
+        /* width: 1125rpx;
+        height: 450rpx;
+        zoom: 2/3; */
+        width: 750rpx;
+        height: 300rpx;
+    }
+    .canvasBox {
+        width: 750rpx;
+        height: 300rpx;
+    }
+    .chartTapGroup {
+        margin: 0 40rpx;
+        width: 670rpx;
+    }
+    .chartTap-off {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20rpx;
+        width: calc(100%/5);
+        height: 44rpx;
+        border: #3580ee solid 2rpx;
+        font-size: 24rpx;
+        color: #333;
+    }
+    .chartTap-on {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20rpx;
+        width: calc(100%/5);
+        height: 44rpx;
+        border: #3580ee solid 2rpx;
+        background-color: #3580ee;
+        font-size: 24rpx;
+        color: #fff;
+    }

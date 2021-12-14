@@ -1,0 +1,55 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+      align-items: center;
+  padding: 40rpx;
+  background: #FEC208
+}
+.log-item {
+  margin: 10rpx;
+}
+.sign-bg {
+  position: relative;
+  width: 702rpx;
+  min-height: 734rpx;
+  background: url('../../images/dika.png') no-repeat;
+  background-size:100% 100%;
+  text-align: center;
+}
+.count-peo {
+  position: absolute;
+  z-index: 100;
+  width: auto;
+  height: 40rpx;
+  padding: 0px 16rpx;
+  background:#FDCA12;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  color: #705D1A;
+  right: 0;
+  top: 14rpx;
+  border-top-left-radius: 6rpx;
+ border-bottom-left-radius: 6rpx;
+}
+.sign-bg2 {
+  margin-top: 16rpx;
+  background: url('../../images/dika2.png') no-repeat;
+  background-size:100% 100%;
+  text-align: center;
+}
+.sign-bg .sign-item1 {
+  width: 676rpx;
+ 
+}
+.btn image{
+  width: 300rpx;
+  height:80rpx;
+}
+.more-info {
+  color: #FD9812;
+  font-size: 22rpx;
+  position:absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+}

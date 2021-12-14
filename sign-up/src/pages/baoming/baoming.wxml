@@ -1,0 +1,56 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <view class="sign-item-no1" >
+      <view>报名赛道</view>
+      <view>
+         {{saidao}}
+      </view>
+  </view>
+  <view class="plan-item">
+      <view style="display: flex;height: 80rpx;width:670rpx;align-items:center;font-size: 32rpx;">团队名</view>
+      <view class="plan-area">
+         <textarea style="height: 3em"  value="{{teamName}}" bindinput="bindchangeName" placeholder="请输入团队名，字数不能超过30个字"  placeholder-class="customPlaClass"/>
+      </view>
+  </view>
+  <view class="plan-item">
+      <view style="display: flex;height: 80rpx;width:670rpx;align-items:center;font-size: 32rpx;">队员</view>
+      <view class="plan-area">
+      <textarea style="height: 3em" value="{{teamMember}}"  bindinput="bindchangeMember" placeholder="请输入队员姓名并用“,”隔开"  placeholder-class="customPlaClass"/>
+      </view>
+  </view>
+  <view class="sign-item">
+      <view style="height:100rpx;display:flex;align-items:center">报名赛题</view>
+      <view class="choose-icon" bindtap="actionSheetTap" >
+         {{option?option:'请选择'}}
+         <image  class="pointer" src="../../images/箭头1.png" style="width: 13.1rpx; height: 23.94rpx;top: 18rpx;"></image>
+      </view>
+  </view>
+  <view>
+      <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+          <block wx:for-items="{{actionSheetItems}}">
+              <action-sheet-item class="item" data-index="{{item}}" bindtap="getSaidao">{{item}}</action-sheet-item>
+          </block>
+          <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+      </action-sheet>
+  </view>
+
+   <view class="title-img">#编程大赛#</view>
+      <view class="upload">
+          <view class="img-box" wx:for="{{imgUrlParams}}" wx:key wx:for-item="item">
+              <image class="checked-img" src="{{item}}" alt=""/>
+              <image class="delete-img" src="../../images/icon_image_del.png"  data-index="{{index}}" bindtap="deleteImg" alt=""/>
+          </view>
+          <view class="img-box" bindtap="handleCheckImage" wx:if="{{imgUrlParams.length<9}}">
+              <image class="checked-img" src="../../images/icon_image_add.png"></image>
+              <text class="upload-tip">请上传团队合照</text>
+          </view>
+      </view>
+
+  <view class="btns"> 
+    <view class="btn-item" style="margin-right:20rpx" ><image src='../../images/cancel.png' bindtap="backTop"/></view> 
+     <view class="btn-item" ><image src='../../images/submit.png' bindtap="handleRelease"/></view>
+  </view>
+</view>
+
+
+

@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/signup/signup",
+    "pages/baoming/baoming"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Light MiniAPP",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/signup/signup",
+        "text": "报名赛道"
+      }
+    ]
+  }
+}

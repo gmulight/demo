@@ -1,0 +1,25 @@
+<view class="bg">
+    <view class="h15"></view>
+    <view class="flex cell-file flex-row">
+      <text class="label">姓名</text>
+      <view class="flex flex-row align-center info-wrap flex-1">
+        <text class="flex info-wrap-text flex-1">陈蔚丰</text>
+      </view>
+    </view>
+    <view class="flex cell-file flex-row ">
+      <text class="label">性别</text>
+      <view class="flex flex-row align-center info-wrap flex-1">
+        <text class="flex info-wrap-text flex-1">男</text>
+      </view>
+    </view>
+    <view class="flex cell-file flex-row ">
+      <text class="label">学位</text>
+      <view class="flex flex-row align-center info-wrap flex-1">
+        <text class="flex info-wrap-text flex-1">南京大学环境科学硕士</text>
+      </view>
+    </view>
+    <view class="flex cell-file flex-row ">
+      <text class="label">背景</text>
+      <text class="flex info-wrap-text flex-1">曾在江苏瑞华投资发展有限公司担任行业研究员。2010年11月加盟浦银安盛基金，担任行业研究员、高级研究员，2014年7月起任公司旗下股票基金经理助理。研究行业涵盖医药、煤炭、旅游、计算机等行业。2015年5月，担任浦银安盛医疗健康混合基金基金经理。2016年1月，担任浦银安盛红利精选混合基金基金经理。</text>
+    </view>
+</view>

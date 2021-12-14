@@ -1,0 +1,277 @@
+.refresh{
+    justify-content: center;
+    align-items: center;
+    width: 750rpx;
+}
+.refresh-text{
+    text-align: center;
+    font-size: 24rpx;
+    height: 60rpx;
+    color:#949494;
+    margin-top:10rpx;
+    margin-bottom:10rpx;
+}
+.subscripe-head {
+    position: relative;
+    height:40rpx;
+    width: 690rpx;
+}
+
+.hot-line {
+    position: relative;
+}
+
+.subscripe-box {
+    background-color: #fff;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-bottom: 55rpx;
+    padding-top: 20rpx;
+    position: relative;
+}
+
+.subscripe {
+    border-width: 1rpx;
+    border-style: solid;
+    border-color: #f0384f;
+    padding-top: 2rpx;
+    padding-right: 6rpx;
+    padding-bottom: 2rpx;
+    padding-left: 6rpx;
+    position:absolute;
+    right:0;
+    top:20rpx;
+}
+
+.search {
+    padding-top: 15rpx;
+    padding-bottom: 30rpx;
+    background-color: #fff;
+}
+
+.search-bar-input {
+    height: 55rpx;
+    border-radius: 30rpx;
+    font-size: 24rpx;
+}
+
+.d-btn {
+    margin-top: 35rpx;
+    margin-left: 60rpx;
+    margin-right: 60rpx;
+    height: 62rpx;
+}
+
+.lineColumn {
+    position: absolute;
+    right: 374rpx;
+    top: 0;
+    bottom: 0;
+    content: " ";
+    width: 1rpx;
+    height: 355rpx;
+    border-right-width: 1rpx;
+    border-right-style: solid;
+    border-right-color: #e8e8e8;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
+
+.search-box {
+    display:flex;
+    width: 750rpx;
+    left: 0;
+    position: fixed;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.item-container {
+    width: 750rpx;
+}
+
+.search-wrap {
+    display:flex;
+    width: 690rpx;
+    background-color: #eee;
+    height: 55rpx;
+    border-radius: 30rpx;
+}
+
+.search-img {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.search-text {
+    font-size: 24rpx;
+    color: #808080;
+}
+
+.line-jx {
+    position: absolute;
+    bottom: 0;
+    left: 40rpx;
+    right: 40rpx;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+
+}
+
+.lineColumn-jx {
+    position: absolute;
+    left: 280rpx;
+    top: 35rpx;
+    bottom: 35rpx;
+    height: 90rpx;
+    content: " ";
+    width: 1rpx;
+    border-right-width: 1rpx;
+    border-right-style: solid;
+    border-right-color: #e8e8e8;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
+
+.bannerImg {
+    height: 270rpx;
+    width: 690rpx;
+}
+
+.indicator {
+    position: absolute;
+    item-color: #fff;
+    item-selected-color: #f0384f;
+    item-size: 14rpx;
+    width: 690rpx;
+    height: 20rpx;
+    bottom: 30rpx;
+}
+
+/* hot */
+.hot-box {
+    background-color: #fff;
+}
+
+.hot-head {
+    display: flex;
+    height: 90rpx;
+    position: relative;
+    padding-right: 30rpx;
+    padding-left: 30rpx;
+}
+
+.cellhot {
+    display: flex;
+    height: 160rpx;
+    padding-right: 40rpx;
+    padding-left: 40rpx;
+    position: relative;
+}
+
+.hot-line {
+    display: flex;
+    flex: 1;
+    position: relative;
+    justify-content: center;
+}
+
+.hot-left {
+    display: flex;
+    width: 240rpx;
+    justify-content: center;
+}
+
+.hot-icon {
+    position: absolute;
+    top: 0;
+    right: 45rpx;
+    width: 50rpx;
+    height: 80rpx;
+}
+
+.line-hot {
+    position: absolute;
+    bottom: 0;
+    left: 40rpx;
+    right: 40rpx;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+
+}
+
+.lineColumn-hot {
+    position: absolute;
+    left: 280rpx;
+    top: 35rpx;
+    bottom: 35rpx;
+    height: 90rpx;
+    content: " ";
+    width: 1rpx;
+    border-right-width: 1rpx;
+    border-right-style: solid;
+    border-right-color: #e8e8e8;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
+
+.line-other {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+}
+
+/* 特色理财 */
+.special-box{
+  display:flex;
+  background-color: #fff;
+}
+.special-head{
+  display:flex;
+  position: relative;
+  height: 90rpx;
+}
+.discover-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.sepcial-box {
+  width: 370rpx;
+  height: 172rpx;
+}
+
+.sepcial-line {
+  width: 70rpx;
+  height: 4rpx;
+  background-color: #fff;
+}
+.sepcial-img {
+  display:flex;
+  width: 370rpx;
+  height: 172rpx;
+}
+.pl5{
+  padding-left: 5rpx;
+}
+.pr5{
+  padding-right: 5rpx;
+}

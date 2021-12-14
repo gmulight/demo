@@ -1,0 +1,61 @@
+<view class="bg">
+      <view class="h15"></view>
+      <view class="flex cell-file flex-row">
+          <text class="label">基金全称</text>
+          <text class="flex info-wrap-text flex-1">浦银安盛医疗健康灵活配置混合型证券投资基金</text>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">基金简称</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">浦银医疗</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">基金代码</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">519171</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">发行日期</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">2015-04-21</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">成立日期</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">2015-05-25</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">管理费</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">1.5%/年</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">托管费</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">0.25%/年</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">收费方式</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">A</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">基金管理人</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">--</text>
+          </view>
+      </view>
+      <view class="flex cell-file flex-row ">
+          <text class="label">基金托管人</text>
+          <view class="flex flex-row align-center info-wrap flex-1">
+              <text class="flex info-wrap-text flex-1">中信银行股份有限公司</text>
+          </view>
+      </view>
+</view>

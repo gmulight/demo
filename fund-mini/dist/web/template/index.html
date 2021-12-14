@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>weapp demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <script src="./util/util.js"></script>
+  <script>
+    window.__devtools = {}
+    var worker = new Worker("./fake.js")
+  </script>
+  <script src="./webInterface.js"></script>
+   <script src="./assets/vconsole.min.js"></script>
+   <!-- <script>
+     var vConsole = new window.VConsole();
+   </script> -->
+  <!--桌面版工具需要使用此方法，否则无法触发点击事件 <script src="./touch-emulator.js"></script> -->
+  <script src="./core/miniapp.webview.js"></script> 
+  <link rel="stylesheet" href="./core/miniapp.webview.css">
+</head>
+
+<body>
+  <wx-page id="page">
+  </wx-page>
+  <script>
+    //桌面版工具需要使用此方法，否则无法触发点击事件 TouchEmulator()
+    worker.addEventListener("message",function(e){
+      var data = e.data;
+      if(data.type === "invoke"){
+        eval(data.content)
+      }else if(data.type === "patch"){
+        eval(data.content.patch)
+      } else if(data.type === "api"){
+        eval(translateToNoSlashString(data.script))
+      } else if(data.type === "sync"){
+        sync(data.api,translateToNoSlashString(data.data))
+      }
+    })
+    worker.postMessage({
+      type:'start',
+      host:location.host,
+      search:location.search
+    })
+    window.__devtools.postMessage = function(script){
+      worker.postMessage({
+        type:'event',
+        script
+      })
+    }
+  </script>
+
+</body>
+
+</html>

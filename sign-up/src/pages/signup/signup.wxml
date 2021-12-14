@@ -1,0 +1,43 @@
+<!--报名赛道-->
+<view class="container log-list">
+   <!--赛道1-->
+    <view class="sign-bg">
+     <!--height: 172rpx; bottom: 56rpx;-->
+      <text class="count-peo">已报名{{track1}}支团队</text>
+      <view style="margin-top: 72rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+         <image class="sign-item1" src="../../images/1.png" style="height:152rpx">
+      </image></view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative" data-inx="194" bindtap="moreDetail">
+         <image class="sign-item1" src="../../images/2.png" style="height:152rpx"></image>
+      </view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/3.png" style="height:172rpx"></image>
+      </view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/4.png" style="height:172rpx"></image>
+      </view>
+      <view class="btn" ><image src='../../images/btn2.png' data-title="U+创意小程序" bindtap="bindViewTap"/></view>
+    </view> 
+
+    <!--赛道2-->
+    <view class="sign-bg sign-bg2">
+     <text class="count-peo">已报名{{track2}}支团队</text>
+      <view style="margin-top: 72rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/2-1.png" style="height:212rpx"></image>
+      </view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/2-2.png" style="height:172rpx"></image>
+      </view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/2-3.png" style="height:172rpx"></image>
+        
+      </view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/2-4.png" style="height:274rpx"></image>
+      </view>
+      <view style="margin-top: 20rpx;text-align: center;position: relative"  data-inx="194" bindtap="moreDetail">
+        <image class="sign-item1" src="../../images/2-5.png" style="height:180rpx"></image>
+      </view>
+      <view class="btn" ><image src='../../images/btn2.png' data-title="Light技术应用" bindtap="bindViewTap"/></view>
+    </view> 
+</view>

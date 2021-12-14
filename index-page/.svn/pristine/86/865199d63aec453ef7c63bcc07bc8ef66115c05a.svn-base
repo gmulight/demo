@@ -1,0 +1,209 @@
+
+<template>
+  <div>
+    <div class="top-wrap">
+      <div class="top-title">
+        <img src="images/service.png" @click="service"/>
+        <h1>国泰君安</h1>
+        <img src="images/message.png" @click="message"/>
+      </div>
+      <div class="nav-wrap">
+        <div
+          class="flex flex-cloum nav-content"
+          @click="openAccount"
+        >
+          <img src="images/nav1.png" />
+          <span>在线开户</span>
+        </div>
+        <div
+          class="flex flex-cloum nav-content"
+          @click="trade"
+        >
+          <img src="images/nav2.png" />
+          <span>期货交易</span>
+        </div>
+        <div
+          class="flex flex-cloum nav-content"
+          @click="market"
+        >
+          <img src="images/nav3.png" />
+          <span>期货行情</span>
+        </div>
+        <div
+          class="flex flex-cloum nav-content"
+          @click="queryMargin"
+        >
+          <img src="images/nav4.png" />
+          <span>保证金查询</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice-wrap">
+      <span>公告</span>
+      <p>公司免费软件“国泰君安”已更新，请及时更新</p>
+    </div>
+
+    <div class="main-wrap">
+      <div
+        class="flex flex-cloum main-content"
+        @click="dataAnalyze"
+      >
+        <img src="images/icon1.png" />
+        <span>机构动向</span>
+        <p>追踪主力动向</p>
+      </div>
+      <div
+        class="flex flex-cloum main-content"
+        @click="canlendar"
+      >
+        <img src="images/icon2.png" />
+        <span>期市日历</span>
+        <p>交易日历大全</p>
+      </div>
+      <div
+        class="flex flex-cloum main-content"
+        @click="college"
+      >
+        <img src="images/icon3.png" />
+        <span>投教学院</span>
+        <p>基础知识教学</p>
+      </div>
+    </div>
+
+    <div class="title">
+      <span>热点资讯</span>
+      <em @click="newsMore">···</em>
+    </div>
+
+    <div
+      class="flex flex-row news-content"
+      v-for="(v,k) in news"
+      :key="k"
+    >
+      <div class="flex flex-cloum news-info">
+        <h3>{{v.title}}</h3>
+        <div class="flex flex-row just-between">
+          <span>{{v.time}}</span>
+          <span>{{v.from}}</span>
+        </div>
+      </div>
+      <img :src="v.img" />
+    </div>
+
+    <div class="line"></div>
+    <div class="title">
+      <span>业务推荐</span>
+    </div>
+    <div
+      class="ad"
+      @click="oil"
+    >
+      <img src="../images/ad.png" />
+    </div>
+
+  </div>
+</template>
+<script>
+import API from "../utils/api"
+export default {
+  data() {
+    return {
+      news: [
+        {
+          title: "漂亮50支撑沪指，大幅波动可能性较小，大盘整体呈高开低走",
+          time: "12:05",
+          from: "期货时报",
+          img: "images/new1.png"
+        },
+        {
+          title: "漂亮50支撑沪指，大幅波动可能性较小，大盘整体呈高开低走",
+          time: "12:05",
+          from: "期货时报",
+          img: "images/new1.png"
+        },
+        {
+          title: "漂亮50支撑沪指，大幅波动可能性较小，大盘整体呈高开低走",
+          time: "12:05",
+          from: "期货时报",
+          img: "images/new1.png"
+        }
+      ]
+    };
+  },
+  methods: {
+    message() {
+      window.appForward({
+        type: 1,
+        pageId: "2-1"
+      });  
+    }, //消息中心
+    service() {
+      window.appForward({
+        type: 1,
+        pageId: "2-5"
+      });  
+    }, //在线客服
+    openAccount() {
+      window.appForward({
+        type: 1,
+        pageId: "2-16"
+      });
+    }, //在线开户
+    trade() {
+      window.appForward({
+        type: 1,
+        pageId: "1-21"
+      });
+    }, //期货交易
+    market() {
+      window.appForward({
+        type: 1,
+        pageId: "1-21-31"
+      });
+    }, //期货行情
+    queryMargin() {
+      window.appForward({
+        type: 1,
+        pageId: "2-59"
+      });
+    }, //保证金查询
+    dataAnalyze() {
+      window.appForward({
+        type: 1,
+        pageId: "2-2"
+      });
+    }, //数据分析
+    college() {
+      window.appForward({
+        type: 1,
+        pageId: "2-3"
+      });
+    }, //投教学院
+    canlendar() {
+      window.appForward({
+        type: 1,
+        pageId: "2-6"
+      });
+    }, //期市日历
+    oil() {
+      window.appForward({
+        type: 1,
+        pageId: "2-7"
+      });
+    }, //原油专区
+    newsMore() {
+      window.appForward({
+        type: 1,
+        pageId: "1-2"
+      });
+    } //更多资讯
+  },
+  mounted() {
+    API.getNews().then((res)=>{console.log(res)})
+    console.log(window.appForward);
+  }
+};
+</script>
+<style lang="less">
+</style>

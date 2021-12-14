@@ -1,0 +1,10 @@
+{
+  "project":"light-mini",
+	"version":"0.0.1",
+	"desc":"测试版本",
+  "type":"miniprogram",
+  "dist":"build",
+  "plugins":["miniprogram2"],
+  "link_id":""
+ 
+}

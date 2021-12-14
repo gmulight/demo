@@ -1,0 +1,126 @@
+<view class="container log-list">
+    <view style="background-color: #f1f0f6; height:1334rpx;">
+        <view class="flex flex-row align-center fund-head">
+            <view class="flex flex-1 pl60 flex-column">
+                <text class="font-12 m-color-6">日涨跌幅</text>
+                <text class="font-20 font-bold mt15 m-color-red">0.86%</text>
+            </view>
+            <view class="flex flex-1 pl60 flex-column">
+                <view class="flex flex-row align-center">
+                    <text class="font-12 m-color-6">最新净值(元)</text>
+                    <text class="font-12 m-color-6 ml10">2020-04-17</text>
+                </view>
+                <text class="font-20 m-color-1 font-bold mt15">1.178</text>
+            </view>
+            <view class="line-view"></view>
+        </view>
+
+        <view class="flex flex-row align-center fund-mid">
+            <view class="flex flex-1 flex-row">
+              <text class="font-12 m-color-1 pr20 borderR">混合型</text>
+              <view class="flex flex-row align-center">
+                  <text class="m-color-8 ml20 mr10 font-12">R3-中风险</text>
+                  <image src="../../images/risk.png" class="risk-icon"></image>
+              </view>
+            </view>
+            <view class="flex flex-row">
+              <text class="font-12 m-color-6 pl60" style="height: 25rpx;line-height: 25rpx">申购起点</text>
+              <text class="font-12 m-color-6 ml10" style="height: 25rpx;line-height: 25rpx">1.00元</text>
+            </view>
+        </view>
+
+        <!-- 图表 -->
+        <view class="mt15 bgc-white">
+            <view class="flex chart-head flex-row align-center">
+                <view class="flex columnar flex-1">
+                    <text class="font-14 m-color-1 font-bold">净值走势</text>
+                </view>
+                <view class="line-view"></view>
+            </view>
+            <view class="canvasBox">
+                <!-- <ec-canvas id="chartline" canvas-id="chartline" ec="{{ optsline }}"></ec-canvas> -->
+                <!-- <ff-canvas id="chartline" canvas-id="chartline" opts="{{ optsline }}"></ff-canvas> -->
+                <!-- <canvas style="width: 750rpx; height: 300rpx;" canvas-id="firstCanvas"></canvas> -->
+                <canvas id="chartline" canvas-id="chartline"></canvas>
+            </view>
+
+            <view class="flex flex-row align-center chartTapGroup">
+                <view class="{{ chartType==1 ? 'chartTap-on':'chartTap-off' }}" data-type="1" bindtap="changeChartData">近一月</view>
+                <view class="{{ chartType==2 ? 'chartTap-on':'chartTap-off' }}" data-type="2" bindtap="changeChartData">近一季</view>
+                <view class="{{ chartType==3 ? 'chartTap-on':'chartTap-off' }}" data-type="3" bindtap="changeChartData">近半年</view>
+                <view class="{{ chartType==4 ? 'chartTap-on':'chartTap-off' }}" data-type="4" bindtap="changeChartData">近一年</view>
+                <view class="{{ chartType==5 ? 'chartTap-on':'chartTap-off' }}" data-type="5" bindtap="changeChartData">成立以来</view>
+            </view>
+            
+        </view>
+
+        <!-- 产品档案 -->
+        <view class="mt15 mb120">
+            <view class="flex chart-head flex-row align-center">
+                <view class="flex columnar flex-1">
+                    <text class="font-14 m-color-1 font-bold">产品档案</text>
+                </view>
+                <view class="line-view"></view>
+              </view>
+            <view class="flex flex-row aboutlist align-center" bindtap="bindViewTap" data-src='file'>
+                <view class="flex flex-1 ">
+                  <text class="font-14 m-color-1">基金档案</text>
+                </view>
+                <view class="mr10">
+                  <text class="font-14 m-color-9">概况</text>
+                </view>
+                <image src="../../images/arrow.png" class="arrow"/>
+                  <view class="line-view" style="left:30rpx"></view>
+            </view>
+            <view class="flex flex-row aboutlist align-center" bindtap="bindViewTap" data-src='managerchange'>
+                <view class="flex flex-1">
+                  <text class="font-14 m-color-1">基金经理</text>
+                </view>
+                <view class="mr10">
+                  <text class="font-14 m-color-9">{{fundManagerName}}</text>
+                </view>
+                <image src="../../images/arrow.png" class="arrow"/>
+            </view>
+            <view class="flex flex-row aboutlist align-center mt15" bindtap="bindViewTap" data-src='rule'>
+                <view class="flex flex-1">
+                  <text class="font-14 m-color-1">交易费率</text>
+                </view>
+                <image src="../../images/arrow.png" class="arrow"/>
+                <view class="line-view"></view>
+            </view>
+
+            <view class="flex align-center flex-row rule-process">
+                <view class="flex flex-column" style="width:160rpx">
+                    <text class="font-14 m-color-1 t-center">申请提交</text>
+                      <view class="flex round-box flex-1 justify-center align-center">
+                        <view class="roundline"></view>
+                        <view class="round"></view>
+                        </view>
+                    <text class="font-12 m-color-9 t-center">今日15点前</text>
+                  </view>
+                  <view class="flex flex-1 flex-column">
+                    <text class="font-14 m-color-1 t-center">确认份额</text>
+                    <view class="flex round-box flex-1 justify-center align-center">
+                        <view class="roundline"></view>
+                        <view class="round"></view>
+                    </view>
+                    <text class="font-12 m-color-9 t-center">09-12 星期四</text>
+                </view>
+                <view class="flex flex-column" style="width:170rpx">
+                    <text class="font-14 m-color-1 t-center">查看盈亏</text>
+                    <view class="flex round-box flex-1 justify-center align-center">
+                        <view class="roundline"></view>
+                        <view class="round"></view>
+                      </view>
+                    <text class="font-12 m-color-9 t-center">09-16 星期一</text>
+                </view>
+            </view>
+
+            <view class="flex flex-row bottomBtn">
+                <view class="flex flex-1 align-center justify-center blue-bj">
+                    <text class="font-18 m-color-5">申 购</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

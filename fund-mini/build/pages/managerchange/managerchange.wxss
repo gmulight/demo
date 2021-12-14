@@ -1,0 +1,56 @@
+.waymain {
+    height: 130rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    position: relative;
+}
+.line-mc {
+    position: absolute;
+    bottom: 0;
+    left: 30rpx;
+    right: 0rpx;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+}
+.managrper{
+    width: 80rpx;
+    height: 80rpx;
+}
+.arrow{
+    width: 20rpx;
+    height: 30rpx;
+}
+
+.tip-box{position: absolute; top:300rpx; width: 600rpx; left:75rpx;}
+.noList{width: 268rpx; height: 240rpx;}
+
+.bg {
+    background-color: #f1f0f6;
+    height: 1334rpx;
+}
+
+.cell-file {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    background-color: #fff;
+}
+.label {
+    font-size: 28rpx;
+    color: #808080;
+    width: 185rpx;
+}
+.info-wrap-text {
+    font-size: 28rpx;
+    color: #333;
+}
+.h15{
+    height: 15rpx;
+    background-color: #f1f0f6;
+}

@@ -1,0 +1,140 @@
+<!-- setting.wxml -->
+<view style="background-color:#f1f0f6;">
+  <!-- 个人详情 -->
+  <view class="setting-top" style="padding-top : {{isIPhoneX ? '88rpx' : '40rpx'}}">
+    <image class="setting-bj" style="height : {{isIPhoneX ?  '358rpx' : '310rpx'}}" src="../../images/setting-afternoon.jpg"></image>
+    <view class="setting-head align-center flex-row">
+      <view class="person align-center flex-row">
+        <image src="../../images/cricle.png" class="cricle mr10"></image>
+        <image src="../../images/Unknown.png" class="perimg"></image>
+        <text class="person-type">{{personType}}</text>
+      </view>
+      <view class="flex align-center flex-row flex-1 justify-end">
+        <image class="book" src="../../images/book.png"></image>
+      </view>
+    </view>
+    <view class="flex flex-1">
+      <view class="flex flex-row justify-between">
+        <view class="flex align-center flex-row" style="z-index:99;">
+          <text class="font-23 m-color-5 font-bold">{{userName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 金额 -->
+  <view class="setting-tab-box flex-row align-center h160">
+    <view class="flex align-start flex-1 ml30 flex-column">
+      <view class="flex flex-row align-center">
+        <text class="font-12 m-color-9">总资产(元)</text>
+        <view class="ml10">
+          <image src="{{eyePic}}" class="eye"></image>
+          <!-- @click="changeType()" -->
+        </view>
+      </view>
+      <view wx:if="{{typeNum === 'num'}}">
+        <text class="font-22 m-color-red font-bold mt15">{{allNum}}</text>
+      </view>
+      <view wx:if="{{typeNum != 'num'}}">
+        <text class="font-22 m-color-red font-bold mt15">******</text>
+      </view>
+    </view>
+    <view class="flex align-start flex-1 ml30 flex-column">
+      <text class="font-12 m-color-9" style="height:50rpx;line-height:50rpx;">昨日收益(元)</text>
+      <view wx:if="{{typeNum === 'num'}}">
+        <text wx:if="{{yestodayNum != 0}}" class="font-22 font-bold mt15 {{yestodayNumColor < 0 ? 'm-color-green' : 'm-color-red'}}">{{yestodayNum}}</text>
+        <text class="font-22 font-bold mt15" wx:else>{{yestodayNum == '0.0' ? '0.00' : yestodayNum}}</text>
+      </view>
+      <view wx:else>
+        <text class="font-22 m-color-red font-bold mt15">******</text>
+      </view>
+    </view>
+    <view class="line-setting"></view>
+  </view>
+
+  <!-- 现金宝 -->
+  <view class="setting-tab-box flex-row align-center h100">
+    <view class="flex flex-row flex-1 align-center">
+      <text class="font-14 m-color-1 ml30">基金</text>
+      <view wx:if="{{typeNum === 'num'}}">
+        <text class="font-16 m-color-1 font-bold ml20">{{jjNum}}</text>
+      </view>
+      <view wx:else>
+        <text class="font-16 m-color-1 font-bold ml20">******</text>
+      </view>
+    </view>
+    <view class="flex-row flex-1 align-center" wx:if="{{usNum != '--'}}">
+      <text class="font-14 m-color-1 ml30">QDII(多币种)</text>
+      <view wx:if="{{typeNum === 'num'}}">
+        <text class="font-16 m-color-1 font-bold ml20">{{usNum}}</text>
+      </view>
+      <view wx:else>
+        <text class="font-16 m-color-1 font-bold ml20">******</text>
+      </view>
+    </view>
+    <view class="lineColumn"></view>
+    <view class="line-setting"></view>
+  </view>
+
+    <!-- 轮播 -->
+  <view class="flex flex-row bgc-white align-center mt15 h100 pl30 pr30">
+    <image style="width:50rpx;height:50rpx;" src="../../images/marquee.png"></image>
+  </view>
+
+    <view class="flex flex-row aboutlist align-center">
+    <!-- @click="jump('bankBox/banklist', '银行卡', {headHidden: true})" -->
+    <view class="flex flex-1 flex-row align-center">
+      <image src="../../images/setting-icons-1.png" class="list-icon"></image>
+      <text class="font-16 m-color-1 ml10">银行卡</text>
+    </view>
+    <text class="font-14 m-color-9 mr20">{{bankCardCount}}</text>
+    <image src="../../images/arrow.png" class="arrow"></image>
+    <view class="lineabout"></view>
+  </view>
+  <view class="flex flex-row aboutlist align-center">
+    <!-- @click="jump('safeBox/safe', '安全中心', {headHidden: true})" -->
+    <view class="flex flex-1 flex-row align-center">
+      <image src="../../images/setting-icons-2.png" class="list-icon"></image>
+      <text class="font-16 m-color-1 ml10">安全设置</text>
+    </view>
+    <image src="../../images/arrow.png" class="arrow"></image>
+    <view class="lineabout"></view>
+  </view>
+  <view class="flex flex-row aboutlist align-center">
+    <!-- @click="jump('riskBox/my-risk', '风险承受能力', {headHidden: true})" -->
+    <view class="flex flex-1 flex-row align-center">
+      <image src="../../images/setting-icons-3.png" class="list-icon"></image>
+      <text class="font-16 m-color-1 ml10">风险承受能力</text>
+    </view>
+    <text class="font-14 m-color-9 mr20">{{riskabilityStr}}</text>
+    <image src="../../images/arrow.png" class="arrow"></image>
+  </view>
+  <view class="flex flex-row aboutlist align-center mt15" v-if="!isActivity">
+    <!-- @click="jump('commend', '推荐好友', {headHidden: true})" -->
+    <view class="flex flex-1 flex-row align-center">
+      <image src="../../images/setting-icons-4.png" class="list-icon"></image>
+      <text class="font-16 m-color-1 ml10">推荐好友</text>
+    </view>
+    <!-- <text class="font-14 m-color-9 mr20">可获得10元手机费</text> -->
+    <image src="../../images/arrow.png" class="arrow"></image>
+    <view class="lineabout"></view>
+  </view>
+  <view class="flex flex-row aboutlist align-center">
+    <!-- @click="jump('feedbackBox/feedback', '意见反馈', {headHidden: true})" -->
+    <view class="flex flex-1 flex-row align-center">
+      <image src="../../images/setting-icons-5.png" class="list-icon"></image>
+      <text class="font-16 m-color-1 ml10">意见反馈</text>
+    </view>
+    <image src="../../images/arrow.png" class="arrow"></image>
+    <view class="lineabout"></view>
+  </view>
+  <view class="flex flex-row aboutlist align-center mb20">
+    <!-- @click="jump('about', '关于我们', {headHidden: true})" -->
+    <view class="flex flex-1 flex-row align-center">
+      <image src="../../images/setting-icons-6.png" class="list-icon"></image>
+      <text class="font-16 m-color-1 ml10">关于我们</text>
+    </view>
+    <image src="../../images/arrow.png" class="arrow"></image>
+  </view>
+
+</view>

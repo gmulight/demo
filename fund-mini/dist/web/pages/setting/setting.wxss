@@ -1,0 +1,227 @@
+.setting-tab-box {
+    display: flex;
+    background-color: #fff;
+    position: relative;
+}
+
+.h100 {
+    height: 100rpx;
+}
+
+.h160 {
+    height: 160rpx;
+}
+
+.setting-top {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    height: 270rpx;
+}
+
+.setting-head {
+    display: flex;
+    height: 80rpx;
+}
+
+.setting-bj {
+    width: 750rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.person {
+    display: flex;
+    position: relative;
+    width: 100rpx;
+    height: 60rpx;
+}
+
+.person-type {
+    position: absolute;
+    width: 25rpx;
+    height: 25rpx;
+    text-align: center;
+    line-height: 25rpx;
+    border-radius: 50%;
+    background-color: #f8646b;
+    right: 12rpx;
+    bottom: 3rpx;
+    font-size: 18rpx;
+    color: #fff;
+}
+
+.book {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+    z-index: 99;
+}
+
+.notice {
+    position: relative;
+    height: 80rpx;
+    width: 60rpx;
+}
+
+.notice-img {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.notice-num {
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    background-color: #f4901e;
+    position: absolute;
+    top: 8rpx;
+    right: 8rpx;
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 18rpx;
+}
+
+.line-setting {
+    position: absolute;
+    bottom: 0;
+    left: 0rpx;
+    right: 0;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+}
+
+.lineabout {
+    position: absolute;
+    bottom: 0;
+    left: 30rpx;
+    right: 0;
+    content: " ";
+    width: auto;
+    height: 1rpx;
+    border-bottom-width: 1rpx;
+    border-bottom-style: solid;
+    border-bottom-color: #e8e8e8;
+    transform: scaleY(0.5);
+}
+
+.lineColumn {
+    position: absolute;
+    right: 374rpx;
+    top: 0;
+    bottom: 0;
+    content: " ";
+    width: 1rpx;
+    height: 100rpx;
+    border-right-width: 1rpx;
+    border-right-style: solid;
+    border-right-color: #e8e8e8;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
+
+.setting-icon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.arrow {
+    width: 20rpx;
+    height: 30rpx;
+}
+
+.aboutlist {
+    height: 100rpx;
+    position: relative;
+    padding-right: 30rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+}
+
+.list-icon {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.data-icon {
+    width: 45rpx;
+    height: 45rpx;
+    margin-top: -15rpx
+}
+
+.num-icon {
+    width: 20rpx;
+    height: 30rpx;
+}
+
+.cricle {
+    width: 10rpx;
+    height: 30rpx;
+}
+
+.perimg {
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.eye {
+    width: 40rpx;
+    height: 30rpx;
+}
+.refresh{
+    justify-content: center;
+    align-items: center;
+    width: 750rpx;
+}
+
+.blue-bj {
+    background-color: #3580ee
+}
+
+.lh88{
+    line-height: 88rpx;
+}
+
+.check-block{
+    width: 30rpx;
+    height: 30rpx;
+}
+/*弹出窗*/
+.tip-icon{
+    width: 220rpx;
+    height: 221rpx;
+}
+.dialog-btn {
+
+    margin-top: 60rpx;
+}
+.mask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background-color: rgba(103,103,103,0.5)
+}
+.h1334{
+    width: 750rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+.showbox{
+    width: 600rpx;
+    height: 700rpx;
+    background-color: #fff;
+}

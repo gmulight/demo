@@ -1,0 +1,107 @@
+<!--discover.wxml-->
+<view style="background-color:#f0eff4;">
+    <view class="search-box justify-around align-center {{isIOS ? (isIPhoneX ? 'pt88' : 'pt40') : ''}}" 
+    style="height : {{isIOS ? (isIPhoneX ?  '168rpx' : '120rpx') : '80rpx'}}; top : {{isAndroid ? '40rpx' : ''}}">
+        <view class="search-wrap flex-row align-center">
+            <image src="../../images/search.png" class="search-img ml20"></image>
+            <text class="search-text ml10">搜索基金名称或代码</text>
+        </view>
+    </view>
+
+    <!-- banner -->
+    <view style="padding-top: {{isIPhoneX ? '168rpx' : '120rpx'}}">
+        <image style="width:750rpx;height:290rpx;" src="../../images/ding-banner.png"></image>
+    </view>
+
+    <!-- 优选基金 -->
+    <view class="hot-box flex-column mt15">
+        <view class="hot-head flex-row align-center">
+            <image src="../../images/home-i3.png" class="home-icon" style="width:35rpx; height:35rpx;"></image>
+            <text class="font-14 m-color-1 font-bold ml10">{{hotNameTwo}}</text>
+            <view class="flex flex-1 align-end flex-column">
+                <text class="font-14 m-color-6">更多</text>
+            </view>
+            <view class="line-other"></view>
+        </view>
+
+        <view class="cellhot justify-center" wx:for="{{fundList}}" wx:for-index="index" wx:for-item="item" wx:if="{{index < 5}}">
+            <view class="hot-line flex-column">
+                <view class="flex flex-row mb10 align-center">
+                    <view class="hot-left align-center">
+                        <text class="font-22 {{item.rate < 0? 'm-color-green' : 'm-color-red'}}">{{item.rate}}{{item.unit}}</text>
+                    </view>
+                    <view class="pl35 flex">
+                        <text class="font-16 m-color-1">{{item.title}}</text>
+                    </view>
+                </view>
+                <view class="flex flex-row align-center">
+                    <view class="hot-left align-center">
+                        <text class="font-12 m-color-9">{{item.mobileShowIncInterval}}</text>
+                    </view>
+                    <view class="pl35 flex">
+                        <text class="font-12 m-color-9" wx:for="{{item.fundinfo.tags}}" wx:for-item="tag" wx:for-index="i">{{i==0? '':' I ' }}{{tag}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="lineColumn-hot"></view>
+            <view class="line-hot"></view>
+        </view>
+    </view>
+
+    <!-- 特色理财 -->
+    <view class="flex-column special-box mt15">
+        <view class="special-head flex-row align-center">
+            <image src="../../images/discover-i1.png" class="discover-icon ml30"></image>
+            <text class="font-14 m-color-1 font-bold ml10">特色理财</text>
+        </view>
+        <view class="flex flex-row pb30 pl5 pr5 justify-between">
+            <view wx:for="{{specialist}}" wx:for-item="item" wx:for-index="index" class="flex-column sepcial-box justify-center align-start {{index==0 ? 'sepcial-b1' : 'sepcial-b2'}}">
+                <image src="../../images/discover-pic1.png" wx:if="{{index==0}}" class="sepcial-img"></image>
+                <image src="../../images/discover-pic2.png" wx:if="{{index==1}}" class="sepcial-img"></image>
+                <view class="flex align-center" style="margin:-130rpx 0 0 60rpx;position: relative;">
+                    <text class="font-16 m-color-5">{{item.title}}</text>
+                </view>
+                <view class="flex align-center mt10"></view>
+                <view class="flex align-center" style="margin:0 0 0 60rpx;position: relative;">
+                      <text class="font-12 m-color-5">{{item.subTitle}}</text>
+                 </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 精选主题 -->
+    <view class="hot-box flex-column mt15">
+        <view class="hot-head flex-row align-center">
+            <image src="../../images/home-i3.png" class="home-icon" style="width:35rpx; height:35rpx;"></image>
+            <text class="font-14 m-color-1 font-bold ml10">{{hotName}}</text>
+            <view class="flex flex-1 align-end flex-column">
+                <text class="font-14 m-color-6">更多</text>
+            </view>
+            <view class="line-other"></view>
+        </view>
+
+        <view class="cellhot justify-center" wx:for="{{hotList}}" wx:for-index="index" wx:for-item="item" wx:if="{{index < 5}}">
+            <view class="hot-line flex-column">
+                <view class="flex flex-row mb10 align-center">
+                    <view class="hot-left align-center">
+                        <text class="font-22 {{item.rate < 0? 'm-color-green' : 'm-color-red'}}">{{item.rate}}{{item.unit}}</text>
+                    </view>
+                    <view class="pl35 flex">
+                        <text class="font-16 m-color-1">{{item.title}}</text>
+                    </view>
+                </view>
+                <view class="flex flex-row align-center">
+                    <view class="hot-left align-center">
+                        <text class="font-12 m-color-9">{{item.mobileShowIncInterval}}</text>
+                    </view>
+                    <view class="pl35 flex">
+                        <text class="font-12 m-color-9" wx:for="{{item.fundinfo.tags}}" wx:for-item="tag" wx:for-index="i">{{i==0? '':' I ' }}{{tag}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="lineColumn-hot"></view>
+            <view class="line-hot"></view>
+        </view>
+    </view>
+
+</view>

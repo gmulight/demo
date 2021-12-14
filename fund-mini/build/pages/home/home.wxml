@@ -1,0 +1,101 @@
+<!--index.wxml-->
+<view style="background-color:#f0eff4;">
+    <!-- 顶部 -->
+    <!-- <view style="background-color:{{styleObject}}" class="py_header flex-row align-center {{isIPhoneX ? 'h168' : 'h120'}} {{paddingTop ? (isIPhoneX ? 'pt88' : 'pt40') : ''}}">
+        <view class="search-wrap flex-row align-center ml30" style="width :{{ paddingTop ? '580rpx' : '640rpx' }}">
+            <image class="search-img ml20" src="../../images/glass.png"/>
+            <text class="search-text ml20"></text>
+        </view>
+        <view wx:if="{{paddingTop}}">
+            <image src="../../images/scan.png" class="scan-icon" bindtap="scanQRCode"/>
+        </view>
+        <view class="notice justify-center" > 
+            <image src="../../images/notice.png" class="notice-img"/>
+            <text class="notice-num" wx:if="{{noticeNum != 0}}">{{noticeNum}}</text>
+        </view>
+    </view> -->
+
+    <view  scroll-y="true" bindscroll="scroll" style="height:1334rpx">
+        <!-- 轮播 -->
+        <view >
+            <swiper autoplay="{{true}}" circular="{{true}}" interval="{{3000}}" duration="{{1000}}"  class="swiper-wrap">
+            <block wx:for-items="{{imageList}}">
+                <swiper-item>
+                    <image src="{{item.src}}" style="width:100%;height:100%"/>
+                </swiper-item>
+            </block>
+            </swiper>
+        </view>
+
+        <!-- nav -->
+        <view class="nav-box flex-row align-center">
+            <view class="flex flex-1 align-center flex-column" wx:for="{{navList}}" wx:for-index="index" wx:for-item="nav">
+                <image class="nav-icon" src="{{nav.iconFilename}}"></image>
+                <text class="font-14 m-color-1">{{nav.title}}</text>
+            </view>
+        </view>
+
+        <!-- 正在热销 -->
+        <view class="hot-box flex-column mt15">
+            <view class="hot-head flex-row align-center">
+                <image src="../../images/home-i3.png" class="home-icon"></image>
+                <text class="font-14 m-color-1 font-bold ml10">{{hotName}}</text>
+                <view class="flex flex-1 align-end flex-column">
+                    <text class="font-14 m-color-6">更多</text>
+                </view>
+                <view class="line-other"></view>
+            </view>
+
+            <view class="cellhot justify-center" bindtap="bindViewTap" wx:for="{{hotList}}" wx:for-index="index" wx:for-item="item" wx:if="{{index < 5}}">
+                <view class="hot-line flex-column">
+                    <view class="flex flex-row mb10 align-center">
+                        <view class="hot-left align-center">
+                            <text class="font-22 {{item.rate < 0? 'm-color-green' : 'm-color-red'}}">{{item.rate}}{{item.unit}}</text>
+                        </view>
+                        <view class="pl35">
+                            <text class="font-16 m-color-1">{{item.title}}</text>
+                        </view>
+                    </view>
+                    <view class="flex flex-row align-center">
+                        <view class="hot-left align-center">
+                            <text class="font-12 m-color-9">{{item.mobileShowIncInterval}}</text>
+                        </view>
+                        <view class="pl35">
+                            <text class="font-12 m-color-9" wx:for="{{item.fundinfo.tags}}" wx:for-item="tag" wx:for-index="i">{{i==0? '':' I ' }}{{tag}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="lineColumn-hot"></view>
+                <view class="line-hot"></view>
+                <!-- <image class="hot-icon" src="../../images/hot-i{{index}}.png" wx:if="{{hotIcon}} && {{index < 3}}"></image> -->
+                <image class="hot-icon" src="../../images/hot-i{{index}}.png" wx:if="{{hotIcon && index < 3}}"></image>
+            </view>
+        </view>
+
+        <!-- 最新资讯 -->
+        <view class="bgc-white mt15">
+            <view class="infor-head flex-row align-center pl30 pr30">
+                <image src="../../images/home-i1.png" class="home-icon"></image>
+                <text class="font-14 m-color-1 font-bold ml10">最新资讯</text>
+                <view class="flex flex-1 align-end flex-column">
+                    <!-- @click="goMore" -->
+                    <text class="font-14 m-color-6">更多</text>
+                </view>
+                <view class="line-other"></view>
+            </view>
+            <view class="flex pt30 pb30 pl30 pr30 flex-row align-center pos-r" wx:for="{{showList}}" wx:for-item="item" wx:for-index="index">
+                <!-- @click="goDetail(item.url)" -->
+                <view class="flex flex-row align-center flex-1">
+                    <view class="flex flex-1 flex-column">
+                        <text class="text-titles lines2">{{item.title}}</text>
+                        <text class="font-12 line34 m-color-99">{{item.create_time}}</text>
+                    </view>
+                    <image src="../../images/new-pic1.png" wx:if="{{index%3==0}}" class="news-img"></image>
+                    <image src="../../images/new-pic2.png" wx:if="{{index%3==1}}" class="news-img"></image>
+                    <image src="../../images/new-pic3.png" wx:if="{{index%3==2}}" class="news-img"></image>
+                </view>
+                <view class="line-hot"></view>
+            </view>
+        </view>
+    </view>
+</view>

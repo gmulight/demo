@@ -1,0 +1,38 @@
+
+<!-- 比赛资料 -->
+<view class="container"  style="height:{{winHeight}}rpx">
+  <!--文档-->
+  <view class="file-con" style="height:{{winHeight*0.2}}rpx">
+   <!-- <view class="file-logo"></view>-->
+    <view class="kecheng-title">
+      <view class="file-logo"></view>
+    </view>
+    <view class="kecheng-con">
+     <view class="con-hrefs" wx:for="{{fileArr}}" wx:for-index="idx">
+      <text class="href-info" data-ginx="{{idx}}">{{item.name}}</text>
+      <image  class="pointer" src="../../images/jiantou1.png" style="width: 11.08rpx; height: 20.24rpx;top: 18rpx;"></image>
+      <text class="href-copy" data-gid="{{idx}}" bindtap="copyHref">复制链接</text>
+    </view>
+    </view>
+   
+  </view>
+   <!--课程-->
+  <view class="file-con ke-detail" style="height:386rpx">
+    
+  </view>
+   <!--demo-->
+   <view class="file-con" style="height:238rpx">
+    <view class="file-logo demo"></view>
+     <view class="kecheng-con">
+     <view class="con-hrefs" wx:for="{{fileDemoArr}}" wx:for-index="idx">
+      <text class="href-info" data-ginx="{{idx}}">{{item.name}}</text>
+      <image  class="pointer" src="../../images/箭头1.png" style="width: 11.08rpx; height: 20.24rpx;top: 18rpx;"></image>
+      <text class="href-copy" data-gid="{{idx}}" bindtap="copyDemoHref">复制链接</text>
+    </view>
+    </view>
+  </view>
+
+  <view class="userinfo" style="height:{{winHeight*0.1}}rpx">
+     <view class="btn-baoming" bindtap="bindViewTap"></view>
+  </view>
+</view>

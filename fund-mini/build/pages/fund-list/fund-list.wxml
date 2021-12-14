@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="search-box flex-row align-center justify-around {{isIOS ? (isIPhoneX ? 'pt88' : 'pt40') : ''}}" style="height:{{isIOS ? (isIPhoneX ?  '168rpx' : '120rpx') : '80rpx'}}; top:{{isAndroid ? '40rpx' : ''}}">
+        <view class="search-wrap flex-row align-center">
+            <image class="search-img ml20" src="../../images/search.png"></image>
+            <text class="search-text ml20">搜索基金名称或代码</text>
+        </view>
+        <view class="flex flex-row align-center">
+            <image class="title-img" src="../../images/heart.png"></image>
+            <text class="search-text ml10">自选</text>
+        </view>
+    </view>
+    
+    <view class="lc-tab-page" style="height: {{isIPhoneX ? '1166rpx' : '1214rpx'}}; top : {{isIPhoneX ? '168rpx' : '120rpx'}}">
+        <scroll-view
+          class="tab-title-list"
+          ref="tab-title-list"
+          scroll-x="true"
+          scroll-with-animation="true"
+          scroll-left="{{currentTabOffsetLeft}}">
+
+          <view class="title-item" scroll-x="true"
+              wx:for="{{tabTitles}}" wx:for-index="index" wx:for-item="v"
+              bindtap="setPage" data-page='{{index}}'>
+            
+            <view class="text-wrap">
+              <text style="font-weight: {{currentPage == index? 'bold' : 'normal'}}; color: {{currentPage == index ? '#3580ee' : '#323232'}}"
+              class="tab-text">{{v.title}}</text>
+            </view>
+            
+            <view class="border-bottom" style="background-color: {{currentPage == index ? '#3580ee' : 'transparent'}}"></view>
+          </view>
+        </scroll-view>
+
+        <scroll-view class="tab-page-wrap" ref="tab-page-wrap" style="height: {{isIPhoneX ? '1086rpx' : '1134rpx'}}" scroll-top="{{scrollTop}}" scroll-y="true">
+          <view>
+
+            <view class="page__hd slideAnimation" wx:for="{{demoList}}" wx:for-index="index" wx:for-item="v" style="transform: translate({{s*(index-currentPage)}}px,0)">
+                <view class="list">
+                    <view class="flex change-data justify-between flex-row align-center" wx:if="{{v.fundlist.length > 0}}">
+                        <text class="flex change-text flex-1">基金名称</text>
+                        <text class="change-text t-right w150">最新净值</text>
+                        <view class="flex justify-end flex-row align-center w150">
+                            <text class="change-text">日涨跌幅</text>
+                            <image class="arrow-more" src='../../images/more.png'></image>
+                        </view>
+                    </view>
+                    <view class="cell-fundlist" wx:for="{{v.fundlist}}" wx:for-index="i" wx:for-item="item" bindtap="bindViewTap">
+                        <view class="flex justify-between flex-row title-wrap align-center">
+                            <view class="flex flex-1 flex-column justify-center w300">
+                                <view class="flex flex-row align-center">
+                                    <view class="title-text-1 text-ellipsis">{{item.shortname ? item.shortname : item.fundname}}</view>
+                                    <view class="flex justify-center {{ item.fundstate == '1' || item.fundstate == '2' || item.fundstate == '6'?'fund-orange':'fund-grey'}}" wx:if="{{ item.fundstate == '1' || item.fundstate == '2' || item.fundstate == '4' || item.fundstate == '6' || item.fundstate == 'a'}}">
+                                        <text class="fund-grey-word">{{item.fundstatestr}}</text>
+                                    </view>
+                                </view>
+                                <text class="title-text-2">{{item.fundcode}}</text>
+                            </view>
+                            <view class="flex flex-column align-end w150">
+                                <text class="cont-text-1" wx:if="{{item.fundtype == '2' && item.navdate}}">{{item.hfincomeratio}}</text>
+                                <text class="cont-text-1" wx:elif="{{item.fundtype != '2' && item.navdate}}">{{item.pernetvalue}}</text>
+                                <text class="cont-text-1" wx:else>--</text>
+                                <text class="cont-text-2" wx:if="{{item.navdate}}">{{item.navdate | formatDate}}</text>
+                            </view>
+
+                            <view class="flex flex-row align-center cont-wrap w150">
+                                <!-- <text class="{{item.incomeratio>0?'cont-text-3':'cont-text-4'}}" wx:if="{{item.fundtype == '2' && item.navdate}}">{{item | formatHfincomeratio}}</text> -->
+                                <text class="{{item.dayinc>=0?'cont-text-3':'cont-text-4'}}">{{item.dayinc}}%</text>
+                                <!-- <text class="{{item.dayinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '1' && item.navdate}}">{{item.dayinc}}</text>
+                                <text class="{{item.weekinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '2' && item.navdate}}">{{item.weekinc}}</text>
+                                <text class="{{item.monthinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '3' && item.navdate}}">{{item.monthinc}}</text>
+                                <text class="{{item.seasonhinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '4' && item.navdate}}">{{item.seasonhinc}}</text>
+                                <text class="{{item.halfyearhinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '5' && item.navdate}}">{{item.halfyearhinc}}</text>
+                                <text class="{{item.yearinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '6' && item.navdate}}">{{item.yearinc}}</text>
+                                <text class="{{item.threeyearinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '7' && item.navdate}}">{{item.threeyearinc}}</text>
+                                <text class="{{item.thisyearinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '8' && item.navdate}}">{{item.thisyearinc}}</text>
+                                <text class="{{item.setupinc>0?'cont-text-3':'cont-text-4'}}" wx:elif="{{item.fundtype != '2' && tableIndex == '9' && item.navdate}}">{{item.setupinc}}</text>
+                                <text class="cont-text-5" wx:else>\-\-</text> -->
+                                <!-- 这里有个\-\-，在注释里会显示异常 -->
+                            </view>
+
+                            <view>
+                                <image class="title-img" src="../../images/heart.png"></image>
+                            </view>
+                            
+                        
+                        </view>
+                    </view>
+                    <view class="flex change-data justify-between flex-row align-center" wx:if="{{v.otherlist.length > 0}}">
+                        <text class="flex change-text flex-1">基金名称</text>
+                        <text class="change-text t-right w150">万份收益</text>
+                        <view class="flex justify-end flex-row align-center w150">
+                            <text class="change-text mr10">七日年化</text>
+                        </view>
+                    </view>
+                    <!-- 还'other'i微信都不支持的语法，怎么写出来的 -->
+                    <!-- <view class="cell-fundlist" wx:for="{{v.otherlist}}" wx:for-index="'other'i" wx:for-item="item"> -->
+                    <view class="cell-fundlist" wx:for="{{v.otherlist}}" wx:for-index="i" wx:for-item="item">
+                        <view class="flex justify-between flex-row title-wrap align-center">
+                            <view class="flex flex-1 flex-column justify-center">
+                                <view class="flex flex-row align-center">
+                                    <text class="title-text-1">{{item.shortname ? item.shortname : item.fundname}}</text>
+                                    <!-- <view class="justify-center {{item.fundstate == '0' || item.fundstate == '1' || item.fundstate == '2' || item.fundstate == '6'?'fund-orange':'fund-grey'}}" wx:if="{{item.fundstate == '0' || item.fundstate == '1' || item.fundstate == '2' || item.fundstate == '6'}}">
+                                        <text class="fund-grey-word">{{item | fundstatestr}}</text>
+                                    </view> -->
+                                </view>
+                                <text class="title-text-2">{{item.fundcode}}</text>
+                            </view>
+
+                            <view class="flex flex-column align-end w150">
+                                <text class="cont-text-1" >{{item.hfincomeratio}}</text>
+                                <text class="cont-text-2">{{item.navdate | formatDate}}</text>
+                            </view>
+                            <view class="flex flex-row align-center cont-wrap w150">
+                                <text class="{{item.hfincomeratio>=0?'cont-text-3':'cont-text-4'}}">{{item.hfincomeratio}}</text>
+                                <!-- <text class="{{item.incomeratio>0?'cont-text-3':'cont-text-4'}}">{{item | formatHfincomeratio}}</text> -->
+                            </view>
+                            <view>
+                                <image class="title-img" src="../../images/heart.png"></image>
+                            </view>       
+                      </view>
+                    </view>
+                </view>
+                
+            </view>
+            
+          </view>
+        </scroll-view>
+    </view>
+</view>
